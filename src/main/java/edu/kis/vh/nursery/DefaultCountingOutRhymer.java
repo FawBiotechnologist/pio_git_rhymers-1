@@ -5,7 +5,7 @@ public class DefaultCountingOutRhymer {
     private static final int size = 12;
     private static final int totalStart = -1;
     private final int[] numbers = new int[size];
-
+    private static final int errNo = -1;
     private int total = totalStart;
 
     public void countIn(int in) {
@@ -18,18 +18,18 @@ public class DefaultCountingOutRhymer {
     }
 
     public boolean isFull() {
-        return total == 11;
+        return total == size - 1;
     }
 
     protected int peekaboo() {
         if (callCheck())
-            return totalStart;
+            return errNo;
         return numbers[total];
     }
 
     public int countOut() {
         if (callCheck())
-            return totalStart;
+            return errNo;
         return numbers[total--];
     }
 
