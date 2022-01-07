@@ -7,7 +7,10 @@ class RhymersDemo {
 
     public static void main(String[] args) {
         Rhymersfactory factory = new DefaultRhymersFactory();
+        testRhymers(factory);
+    }
 
+    private static void testRhymers(Rhymersfactory factory) {
         DefaultCountingOutRhymer[] rhymers = {factory.getStandardRhymer(), factory.getFalseRhymer(), factory.getFIFORhymer(), factory.getHanoiRhymer()};
 
         for (int i = 1; i < 15; i++)
@@ -18,13 +21,12 @@ class RhymersDemo {
         for (int i = 1; i < 15; i++)
             rhymers[3].countIn(rn.nextInt(20));
 
-        for (int i = 0; i < rhymers.length; i++) {
-            while (!rhymers[i].callCheck()) System.out.print(rhymers[i].countOut() + "  ");
+        for (DefaultCountingOutRhymer rhymer : rhymers) {
+            while (!rhymer.callCheck()) System.out.print(rhymer.countOut() + "  ");
             System.out.println();
         }
 
         System.out.println("total rejected is " + ((HanoiRhymer) rhymers[3]).reportRejected());
-
     }
 
 }
