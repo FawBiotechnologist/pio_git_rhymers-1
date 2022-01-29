@@ -7,6 +7,13 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 
     private final DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
 
+    public FIFORhymer() {
+    }
+
+    public FIFORhymer(Stacks stackImplementation) {
+        super(stackImplementation);
+    }
+
     /**
      * @return method returns element from queue
      */
