@@ -7,10 +7,10 @@ public class IntArrayStack implements Stacks {
     private static final int TOTAL_START = -1;
     private final int[] numbers = new int[SIZE];
     private int total = TOTAL_START;
-
-    public int getTotal() {
-        return total;
-    }
+// unused function depending on project future it may or may not be deleted
+//    public int getTotal() {
+//        return total;
+//    }
 
     public void countIn(int in) {
         if (!isFull()) numbers[++total] = in;

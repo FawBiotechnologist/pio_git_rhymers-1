@@ -6,7 +6,7 @@ public class IntLinkedList implements Stacks {
 
     private Node last;
 
-    public void push(int i) {
+    private void push(int i) {
         if (last == null) last = new Node(i);
         else {
             last.setNext(new Node(i));
@@ -15,16 +15,16 @@ public class IntLinkedList implements Stacks {
         }
     }
 
-    public boolean isEmpty() {
+    private boolean isEmpty() {
         return last == null;
     }
 
-    public int top() {
+    private int top() {
         if (isEmpty()) return ERR_NO;
         return last.getValue();
     }
 
-    public int pop() {
+    private int pop() {
         if (isEmpty()) return ERR_NO;
         int ret = last.getValue();
         last = last.getPrev();
