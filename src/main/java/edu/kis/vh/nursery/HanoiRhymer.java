@@ -8,6 +8,13 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
         return totalRejected;
     }
 
+    public HanoiRhymer() {
+    }
+
+    public HanoiRhymer(Stacks stackImplementation) {
+        super(stackImplementation);
+    }
+
     @Override
     public void countIn(int in) {
         if (!callCheck() && in > peekaboo()) totalRejected++;
