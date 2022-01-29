@@ -1,10 +1,11 @@
-package edu.kis.vh.nursery;
+package edu.kis.vh.nursery.dataStructures;
 
-public class IntArrayStack {
+import edu.kis.vh.nursery.Stacks;
+
+public class IntArrayStack implements Stacks {
     private static final int SIZE = 12;
     private static final int TOTAL_START = -1;
     private final int[] numbers = new int[SIZE];
-    private static final int ERR_NO = -1;
     private int total = TOTAL_START;
 
     public int getTotal() {
@@ -23,7 +24,7 @@ public class IntArrayStack {
         return total == SIZE - 1;
     }
 
-    protected int peekaboo() {
+    public int peekaboo() {
         if (callCheck()) return ERR_NO;
         return numbers[total];
     }
