@@ -8,14 +8,14 @@ public class DefaultCountingOutRhymer {
     obiekt który implementuje ten interfejs co pozwala nam na łatwą i szybką modyfikację sposobu implementacji
     bez konieczności wprowadzania zmian w tej klasie
     */
-    Stacks intArrayStack;
+    Stacks stackImplementation;
 
     public DefaultCountingOutRhymer() {
-        this.intArrayStack = new IntArrayStack();
+        this.stackImplementation = new IntArrayStack();
     }
 
-    public DefaultCountingOutRhymer(Stacks intArrayStack) {
-        this.intArrayStack = intArrayStack;
+    public DefaultCountingOutRhymer(Stacks stackImplementation) {
+        this.stackImplementation = stackImplementation;
     }
 
 //    public int getTotal() {
@@ -24,27 +24,27 @@ public class DefaultCountingOutRhymer {
 
 
     public void countIn(int in) {
-        intArrayStack.countIn(in);
+        stackImplementation.countIn(in);
     }
 
 
     public boolean callCheck() {
-        return intArrayStack.callCheck();
+        return stackImplementation.callCheck();
     }
 
 
     public boolean isFull() {
-        return intArrayStack.isFull();
+        return stackImplementation.isFull();
     }
 
 
     public int peekaboo() {
-        return intArrayStack.peekaboo();
+        return stackImplementation.peekaboo();
     }
 
 
     public int countOut() {
-        return intArrayStack.countOut();
+        return stackImplementation.countOut();
     }
 
 }
