@@ -8,7 +8,7 @@ public class DefaultCountingOutRhymer {
     obiekt który implementuje ten interfejs co pozwala nam na łatwą i szybką modyfikację sposobu implementacji
     bez konieczności wprowadzania zmian w tej klasie
     */
-    Stacks stackImplementation;
+    private final Stacks stackImplementation;
 
     public DefaultCountingOutRhymer() {
         this.stackImplementation = new IntArrayStack();
@@ -17,7 +17,7 @@ public class DefaultCountingOutRhymer {
     public DefaultCountingOutRhymer(Stacks stackImplementation) {
         this.stackImplementation = stackImplementation;
     }
-
+//unused function depending on project future it may or may not be deleted
 //    public int getTotal() {
 //        return intArrayStack.getTotal();
 //    }
