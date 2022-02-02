@@ -2,7 +2,10 @@ package edu.kis.vh.nursery;
 
 import org.junit.Assert;
 import org.junit.Test;
-
+//*Pytanie: Jeżeli występują błędy określ, gdzie i przy realizacji, których punktów powstały.
+// naprawiłem to wcześniej, ale testy testPeekaboo() i testCountOut() powinny wyrzucić błąd ponieważ zmieniliśmy
+//wartość zwracaną z -1 na 0 w punkcie 2.2.6 przez co powstał błąd w teście który skutkował
+// fałszywie negatywnym wynikiem testu
 public class RhymersJUnitTest {
 
     @Test
